@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiBio - Платформа</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .page { display: none; }
+        .page.active { display: block; }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+    <div class="max-w-md mx-auto min-h-screen bg-white shadow-2xl relative flex flex-col">
+        
+        <main class="flex-1 overflow-y-auto no-scrollbar pb-24">
+            
+            <div id="home" class="page active p-6 space-y-6 animate-in fade-in">
+                <div class="flex items-center space-x-4 mb-8">
+                    <div class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-white shadow-lg">
+                        <i data-lucide="user"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold">Сәлеметсіз бе!</h1>
+                        <p class="text-sm text-gray-500">Биология әлеміне қош келдіңіз</p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-emerald-500 to-teal-600 p-10 rounded-[40px] text-white shadow-xl text-center relative overflow-hidden">
+                    <i data-lucide="qr-code" class="w-16 h-16 mx-auto mb-4 opacity-80"></i>
+                    <h2 class="text-2xl font-bold">QR Сканер</h2>
+                    <p class="text-emerald-100 text-sm">Оқулықты жылдам ашу</p>
+                </div>
+
+                <div onclick="showPage('ai')" class="bg-indigo-600 p-6 rounded-3xl text-white flex items-center justify-between cursor-pointer shadow-lg active:scale-95 transition-transform">
+                    <div class="flex items-center space-x-4">
+                        <div class="p-3 bg-white/20 rounded-2xl"><i data-lucide="sparkles"></i></div>
+                        <div>
+                            <p class="font-bold">Ustaz AI</p>
+                            <p class="text-xs text-indigo-200">Интеллектуалды көмекші</p>
+                        </div>
+                    </div>
+                    <i data-lucide="chevron-right"></i>
+                </div>
+            </div>
+
+            <div id="books" class="page p-6 space-y-6">
+                <h2 class="text-2xl font-bold mb-6">Сандық оқулықтар</h2>
+                
+                <div class="space-y-4">
+                    <div class="text-xs font-bold text-gray-400 uppercase tracking-widest">7-Сынып</div>
+                    <a href="https://okulyk.kz/biologija/1039/" target="_blank" class="flex items-center justify-between p-4 bg-white border rounded-2xl shadow-sm">
+                        <div class="flex items-center space-x-3"><i data-lucide="book" class="text-blue-500"></i><span class="text-sm font-medium">Биология (Аймуханов)</span></div>
+                        <i data-lucide="external-link" class="w-4 h-4 text-gray-300"></i>
+                    </a>
+
+                    <div class="text-xs font-bold text-gray-400 uppercase tracking-widest pt-4">8-Сынып</div>
+                    <a href="https://okulyk.kz/biologija/1069/" target="_blank" class="flex items-center justify-between p-4 bg-white border rounded-2xl shadow-sm">
+                        <div class="flex items-center space-x-3"><i data-lucide="book" class="text-emerald-500"></i><span class="text-sm font-medium">Биология (Короткова)</span></div>
+                        <i data-lucide="external-link" class="w-4 h-4 text-gray-300"></i>
+                    </a>
+
+                    <div class="text-xs font-bold text-gray-400 uppercase tracking-widest pt-4">Қосымша</div>
+                    <div class="p-5 bg-emerald-50 rounded-3xl border border-emerald-100 flex items-center space-x-4">
+                        <div class="p-3 bg-emerald-500 text-white rounded-xl"><i data-lucide="folder-open"></i></div>
+                        <div>
+                            <p class="text-sm font-bold text-emerald-900">ҚМЖ жинағы</p>
+                            <p class="text-xs text-emerald-600 italic">Drive бұлтында</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="games" class="page p-6 space-y-6">
+                <h2 class="text-2xl font-bold mb-6">Биологиялық ойындар</h2>
+                
+                <div class="grid grid-cols-1 gap-4">
+                    <a href="https://wordwall.net/ru/resource/52683273" target="_blank" class="p-5 bg-orange-50 rounded-3xl border border-orange-100 flex items-center justify-between group">
+                        <div class="flex items-center space-x-4">
+                            <div class="p-3 bg-orange-500 text-white rounded-2xl"><i data-lucide="gamepad-2"></i></div>
+                            <div>
+                                <p class="font-bold text-orange-900">Ботаника әлемі</p>
+                                <p class="text-xs text-orange-600">7-сынып ойыны</p>
+                            </div>
+                        </div>
+                        <i data-lucide="play-circle" class="text-orange-500 group-hover:scale-110 transition-transform"></i>
+                    </a>
+
+                    <a href="https://wordwall.net/ru/resource/69120314" target="_blank" class="p-5 bg-purple-50 rounded-3xl border border-purple-100 flex items-center justify-between group">
+                        <div class="flex items-center space-x-4">
+                            <div class="p-3 bg-purple-500 text-white rounded-2xl"><i data-lucide="brain"></i></div>
+                            <div>
+                                <p class="font-bold text-purple-900">Анатомия викторинасы</p>
+                                <p class="text-xs text-purple-600">8-сынып ойыны</p>
+                            </div>
+                        </div>
+                        <i data-lucide="play-circle" class="text-purple-500 group-hover:scale-110 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div id="ai" class="page p-6 flex flex-col h-full">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center shadow-md">
+                        <i data-lucide="bot"></i>
+                    </div>
+                    <h2 class="text-xl font-bold">Ustaz AI</h2>
+                </div>
+                <div class="flex-1 bg-gray-50 rounded-[32px] p-4 border border-gray-100 min-h-[300px] overflow-y-auto mb-4">
+                    <div class="bg-white p-4 rounded-2xl rounded-bl-none shadow-sm text-sm border self-start max-w-[80%]">
+                        Сәлеметсіз бе! Мен биология пәні бойынша көмекшіңізбін. Қандай сұрағыңыз бар?
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2 bg-white border p-2 rounded-2xl shadow-sm">
+                    <input type="text" placeholder="Сұрақ қойыңыз..." class="flex-1 px-4 py-2 outline-none text-sm">
+                    <button class="bg-indigo-600 text-white p-3 rounded-xl hover:bg-indigo-700"><i data-lucide="send" class="w-4 h-4"></i></button>
+                </div>
+            </div>
+
+        </main>
+
+        <nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-white/80 backdrop-blur-md border-t flex justify-around py-4 z-50">
+            <button onclick="showPage('home')" class="nav-btn flex flex-col items-center text-emerald-600" id="btn-home">
+                <i data-lucide="home" class="w-6 h-6"></i>
+                <span class="text-[9px] font-bold mt-1 uppercase">Басты</span>
+            </button>
+            <button onclick="showPage('books')" class="nav-btn flex flex-col items-center text-gray-400" id="btn-books">
+                <i data-lucide="book-open" class="w-6 h-6"></i>
+                <span class="text-[9px] font-bold mt-1 uppercase">Оқулық</span>
+            </button>
+            <button onclick="showPage('ai')" class="nav-btn flex flex-col items-center text-gray-400" id="btn-ai">
+                <i data-lucide="message-square" class="w-6 h-6"></i>
+                <span class="text-[9px] font-bold mt-1 uppercase">AI</span>
+            </button>
+            <button onclick="showPage('games')" class="nav-btn flex flex-col items-center text-gray-400" id="btn-games">
+                <i data-lucide="gamepad-2" class="w-6 h-6"></i>
+                <span class="text-[9px] font-bold mt-1 uppercase">Ойындар</span>
+            </button>
+        </nav>
+    </div>
+
+    <script>
+        // Иконкаларды іске қосу
+        lucide.createIcons();
+
+        // Беттерді ауыстыру логикасы
+        function showPage(pageId) {
+            // Барлық беттерді жасыру
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            // Таңдалған бетті көрсету
+            document.getElementById(pageId).classList.add('active');
+
+            // Түймелердің түсін өзгерту
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.replace('text-emerald-600', 'text-gray-400');
+            });
+            document.getElementById('btn-' + pageId).classList.replace('text-gray-400', 'text-emerald-600');
+        }
+    </script>
+</body>
+</html>
